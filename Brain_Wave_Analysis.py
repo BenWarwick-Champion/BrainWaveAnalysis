@@ -333,7 +333,9 @@ def submission_program(file_name, load_network=0, plot_output=0):
 
     return d, peaks, Class
 
-# Run the training program -- input args: input_file, load_network, plot_output (0 = No (Default), 1 = Yes)
-#training_program('training.mat','saved.mat', 0, 0)
-d, Index, Class = submission_program('submission.mat', 'saved.mat', 0)
-save_submission('10236.mat', d, Index, Class)
+
+if __name__ == "__main__":
+    # Run the training program -- input args: input_file, load_network, plot_output (0 = No (Default), 1 = Yes)
+    #training_program('training.mat','saved.mat', 0, 0)
+    d, Index, Class = submission_program('submission.mat', 'saved.mat', 0)
+    save_submission('10236.mat', d, Index, Class)
